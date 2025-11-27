@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>알림</title>
+</head>
+<body>
+<script th:inline="javascript">
+    /* 컨트롤러에서 보낸 msg와 url을 자바스크립트 변수에 담습니다 */
+    var message = [[${msg}]];
+    var url = [[${url}]];
+
+    // 1. 메시지가 있으면 알림창(Alert)을 띄움
+    if (message) {
+        alert(message);
+    }
+
+    // 2. 이동할 주소(url)가 있으면 이동, 없으면 뒤로가기
+    if (url) {
+        location.href = url;
+    } else {
+        history.back();
+    }
+</script>
+</body>
+</html>

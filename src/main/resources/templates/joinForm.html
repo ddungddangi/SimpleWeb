@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>계정 생성</h1>
+    <p>하나의 ID로 모든 서비스를.</p>
+
+    <form action="join" method="post" style="text-align: left;">
+        <span class="label-text">아이디 (이메일)</span>
+        <input type="email" name="memberId" placeholder="example@email.com" required>
+
+        <span class="label-text">암호</span>
+        <input type="password" name="password" placeholder="4글자 이상 입력" minlength="4" required>
+
+        <span class="label-text">이름</span>
+        <input type="text" name="name" placeholder="홍길동" required>
+
+        <span class="label-text">나이</span>
+        <input type="number" name="age" placeholder="20">
+
+        <button type="submit" style="margin-top: 20px;">계정 만들기</button>
+    </form>
+
+    <button class="secondary" onclick="location.href='/'" style="margin-top: 15px;">취소</button>
+</div>
+</body>
+</html>

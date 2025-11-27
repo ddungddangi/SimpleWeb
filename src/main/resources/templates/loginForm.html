@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>로그인</h1>
+    <p>서비스 이용을 위해 인증해주세요.</p>
+
+    <form action="login" method="post" style="margin-top: 30px;">
+        <input type="text" name="memberId" placeholder="이메일 또는 아이디" required>
+        <input type="password" name="password" placeholder="암호" required>
+
+        <button type="submit" style="margin-top: 20px;">로그인</button>
+    </form>
+
+    <div style="margin-top: 30px; font-size: 14px;">
+        <span style="color: #86868b;">계정이 없으신가요?</span>
+        <a href="/join" style="margin-left: 5px;">지금 만들기 ↗</a>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <a href="/" style="font-size: 13px; color: #86868b;">메인으로 돌아가기</a>
+    </div>
+</div>
+</body>
+</html>
